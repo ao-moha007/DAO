@@ -1,13 +1,21 @@
-# Sample Hardhat Project
+# DAO Smart Contract
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+# Overview
+This Decentralized Autonomous Organization (DAO) contract enables token holders to create proposals, vote on governance decisions, and execute approved proposals on a target contract. It utilizes ERC-20 tokens for voting power and allows vote delegation.
 
-Try running some of the following tasks:
+# Features
+# Governance & Voting
+Proposal Creation: Token holders can propose changes or actions for the DAO.
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
-```
+Voting System: Members vote using ERC-20 tokens, with delegated voting support.
+
+Quorum Requirement: A proposal needs at least 10 tokens to be valid.
+
+Execution Mechanism: Proposals that pass voting are executed via smart contract calls.
+
+# Security & Fair Voting
+Delegated Voting: Users can delegate their votes to another member.
+
+Vote Tracking: Prevents double voting per proposal.
+
+Execution Failure Handling: Captures and logs transaction errors for debugging.
